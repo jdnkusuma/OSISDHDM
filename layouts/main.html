@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.00, minimum-scale-1.00, maximum-scale=2.00, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Main Page</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/shan.css" />
+    <link rel="stylesheet" href="css/slide.css" />
+    <link rel="stylesheet" href="font/font.css" />
+
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+        
+        ul {
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        li {
+            display: inline-block;
+            color: #0B0736;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        
+        .viewPosts {
+            background-color: rgb(56, 69, 121);
+            border-radius: 1rem;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            position: absolute;
+            bottom: 10px;
+            left: 15px;
+            font-size: 1.5rem;
+            padding: 10px;
+            transition-duration: 0.4s;
+        }
+        
+        .text-darkBlue {
+            --tw-text-opacity: 1;
+            color: #0B0736;
+        }
+        
+        .main-img {
+            position: absolute;
+            right: 0;
+            top: 4rem;
+            width: auto;
+            height: 100%;
+            z-index: -99999;
+        }
+        
+        .main-text {
+            margin-top: 4rem;
+            margin-left: 10rem;
+        }
+        
+        .text-img {
+            width: 30%;
+            height: auto;
+        }
+        
+        #content {
+            margin-top: 12rem;
+        }
+        
+        #sosmed {
+            text-align: center;
+        }
+        
+        #sosmed2>div {
+            width: 450px;
+            height: 140px;
+            border-width: 10px;
+            border-style: solid;
+            border-radius: 1rem;
+            background-color: #f3f3f3;
+            border-color: #f3f3f3;
+            box-shadow: 4px 4px 4px #c0c0c0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #sosmed2>div>span {
+            margin-left: 1.5rem;
+            font-size: 36px;
+        }
+        
+        #insta {
+            width: 5em;
+            height: auto;
+        }
+        
+        #carousel>div>img {
+            border-radius: 2rem;
+            position: absolute;
+            height: 45%;
+            width: 100%;
+            filter: brightness(85%);
+        }
+        
+        #carousel>div>p {
+            color: #0B0736;
+        }
+        
+        #carousel>div>#Title {
+            margin-top: 62.5%;
+            margin-bottom: 1%;
+            font-size: 2rem;
+            text-align: center;
+            color: #0B0736;
+        }
+        
+        #carousel>div>a {
+            text-align: center;
+            font-size: 18px;
+        }
+        
+        #carousel>div>a>div {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        
+        #carousel>div>p {
+            position: absolute;
+            bottom: 10px;
+            right: 25px;
+            font-size: 24px
+        }
+        
+        @media only screen and (max-width:776px) {
+            nav>ul>li {
+                display: none;
+            }
+        }
+        /*Phone Screen ^*/
+        
+        @media only screen and (min-width:777px) {
+            #menu {
+                display: none;
+            }
+        }
+        /*Desktop Screen^*/
+        
+        input {
+            margin-top: 20rem;
+        }
+        
+        #carrousel-bg {
+            position: relative;
+        }
+        
+        #carrousel {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .adswrap {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            color: white;
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        #adswrap>div {
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body class="no-scrollbar" style="font-family:Euclid Circular B; background-color: #fafafa;">
+    <!--Top-->
+    <div class="adswrap" id="adswrap">
+        <div>Promotion Ads</div>
+    </div>
+
+    <nav class="grid grid-cols-12 gap-4 justify-items-center content-center" style="font-size: 24px;">
+        <div class="top-5 left-5 absolute" style="display: inline-block;">
+            <img src="../src/svg/OSISDHDM.svg">
+        </div>
+        <div class="col-span-2"></div>
+        <ul class="col-span-8">
+            <li>
+                <a>About</a>
+            </li>
+            <li>
+                <a>News</a>
+            </li>
+            <li>
+                <a>Event</a>
+            </li>
+            <li>
+                <a>Promotion</a>
+            </li>
+        </ul>
+        <div id="menu" class="col-span-2" style="margin-top: 0.9rem; margin-left: 10px;">
+            <svg class="h-8 w-8 text-darkBlue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">  <line x1="3" y1="12" x2="21" y2="12" />  <line x1="3" y1="6" x2="21" y2="6" />  <line x1="3" y1="18" x2="21" y2="18" /></svg>
+        </div>
+    </nav>
+
+    <!--Content-->
+    <div id="content">
+        <!--1-->
+
+        <div class="main-text">
+            <img class="text-img" src="../src/svg/bot-text.svg" alt="">
+            <img class="text-img" src="../src/svg/top-text.svg" alt="" style="margin-top: 1rem;">
+        </div>
+        <img class="main-img" src="../src/svg/main.svg" alt="">
+
+        <!--2-->
+
+        <div id="sosmed2" class="grid grid-cols-3 justify-items-center content-center gap-4" style="margin-top:28rem">
+            <div><img id="insta" src="../src/svg/Insta.svg" alt="" style="float: left;">
+                <span>Instagram</span>
+            </div>
+            <div><img id="insta" src="../src/svg/Spotify.svg" alt="">
+                <span>Spotify</span>
+            </div>
+            <div><img id="insta" src="../src/svg/YT.svg" alt="">
+                <span>Youtube</span>
+            </div>
+        </div>
+
+        <!--3-->
+
+        <div id="carrousel-bg" style="margin-top: 2.5rem;">
+            <p style="font-size: 100px; color: #ffffff; position: absolute; margin-left: auto;margin-right: auto;left: 0;right: 0;text-align: center; margin-top: 12rem;">Events</p>
+            <img src="../src/svg/Wave.svg" alt="" style="width:100%; height: auto !important;">
+
+            <div id="carrousel" style="margin-top:3rem;">
+                <input type="radio" name="position" checked />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <main id="carousel">
+                    <div class="item">
+                        <img src="https://images.greelane.com/proxy?url=https%3A%2F%2Fwww.thoughtco.com%2Fthmb%2F2VKUXWMkNImjRTnQIOyXCcXOhLo%3D%2F2127x1412%2Ffilters%3Afill%28auto%2C1%29%2F173333692-56a142325f9b58b7d0bd89ae.jpg&width=750" alt="">
+                        <div id="Title">Dice</div>
+                        <a>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque posuere dictum. Phasellus porttitor lacus eget ullamcorper venenatis. Donec lacinia tempus sem, semper blandit tortor tincidunt quis. In vel finibus
+                                dui. Praesent aliquet risus ut facilisis venenatis. In tristique vehicula quam, at egestas massa molestie quis. Vestibulum hendrerit ante ac libero malesuada, vitae venenatis dui sodales. Sed ut massa quis enim iaculis
+                                gravida id quis dolor. Curabitur commodo sapien id tempus iaculis.</div>
+                        </a>
+                        <div class="viewPosts">
+                            <a>View Posts</a>
+                        </div>
+                        <p>24 Jan 2022</p>
+                    </div>
+                    <div class="item ">
+                        <img src="https://wishesandquotes.com/wp-content/uploads/2020/06/wp3532581-1024x640.jpg" alt="">
+                        <div id="Title">Friendship Day</div>
+                        <a>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque posuere dictum. Phasellus porttitor lacus eget ullamcorper venenatis. Donec lacinia tempus sem, semper blandit tortor tincidunt quis. In vel finibus
+                                dui. Praesent aliquet risus ut facilisis venenatis. In tristique vehicula quam, at egestas massa molestie quis. Vestibulum hendrerit ante ac libero malesuada, vitae venenatis dui sodales. Sed ut massa quis enim iaculis
+                                gravida id quis dolor. Curabitur commodo sapien id tempus iaculis.</div>
+                        </a>
+                        <div class="viewPosts">
+                            <a>View Posts</a>
+                        </div>
+                        <p>24 Jan 2022</p>
+                    </div>
+                    <div class="item ">
+                        <img src="https://www.spreadshirt.com/blog/files/2015/05/blog_festival_Main.jpg" alt="">
+                        <div id="Title">Summer Fest</div>
+                        <a>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque posuere dictum. Phasellus porttitor lacus eget ullamcorper venenatis. Donec lacinia tempus sem, semper blandit tortor tincidunt quis. In vel finibus
+                                dui. Praesent aliquet risus ut facilisis venenatis. In tristique vehicula quam, at egestas massa molestie quis. Vestibulum hendrerit ante ac libero malesuada, vitae venenatis dui sodales. Sed ut massa quis enim iaculis
+                                gravida id quis dolor. Curabitur commodo sapien id tempus iaculis.</div>
+                        </a>
+                        <div class="viewPosts">
+                            <a>View Posts</a>
+                        </div>
+                        <p>24 Jan 2022</p>
+                    </div>
+                    <div class="item ">
+                        <img src="https://preparatoryblog.files.wordpress.com/2018/07/holiday-2103171_960_720.jpg" alt="">
+                        <div id="Title">Holiday</div>
+                        <a>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque posuere dictum. Phasellus porttitor lacus eget ullamcorper venenatis. Donec lacinia tempus sem, semper blandit tortor tincidunt quis. In vel finibus
+                                dui. Praesent aliquet risus ut facilisis venenatis. In tristique vehicula quam, at egestas massa molestie quis. Vestibulum hendrerit ante ac libero malesuada, vitae venenatis dui sodales. Sed ut massa quis enim iaculis
+                                gravida id quis dolor. Curabitur commodo sapien id tempus iaculis.</div>
+                        </a>
+                        <div class="viewPosts">
+                            <a>View Posts</a>
+                        </div>
+                        <p>24 Jan 2022</p>
+                    </div>
+                    <div class="item ">
+                        <img src="https://www.seekpng.com/png/detail/2-27788_coming-soon-handwritten-coming-soon-logo-png.png" alt="">
+                        <div id="Title">???</div>
+                        <a>
+                            <div>??????????? ?????????? ????? ????????? ????? ???????? ?????????????? ????????????? ????????????? ????????????? ????????????? ????????????? ????????? ???????? ??????????? ??????????? ?????????? ????? ????????? ????? ??????????????
+                                ????????????? ????????????? ????????????? ????????????? ????????????? ????????? ???????? ??????????? ??????????? ?????????? ????? ????????? ????? ???????? ?????????????? ????????????? ????????????? ????????????? ?????????????
+                                ????????????? ????????? ???????? ???????????
+                            </div>
+                        </a>
+                        <div class="viewPosts">
+                            <a>View Posts</a>
+                        </div>
+                        <p>?? ?? ????</p>
+                    </div>
+                    <main>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script>
+        document.getElementsByClassName('adswrap')[0].style.display = "block";
+        setTimeout(function() {
+            document.getElementsByClassName('adswrap')[0].style.display = "none";
+        }, 15000);
+    </script>
+
+
+
+
+</body>
+
+</html>
+
+</html>
