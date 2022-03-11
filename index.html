@@ -108,6 +108,14 @@
             height: auto;
         }
         
+        #countdown-timer {
+            font-size: 64px;
+        }
+
+        #event-countdown-name {
+            font-size: 64px;
+        }
+
         #carousel>div>img {
             border-radius: 2rem;
             position: absolute;
@@ -237,19 +245,33 @@
         <!--2-->
 
         <div id="sosmed2" class="grid grid-cols-3 justify-items-center content-center gap-4" style="margin-top:28rem">
-            <div><img id="insta" src="./src/svg/Insta.svg" alt="" style="float: left;">
+            <div onclick="window.open('https://www.instagram.com/osisdhdm/');"><img id="insta" src="./src/svg/Insta.svg" alt="" style="float: left;">
                 <span>Instagram</span>
             </div>
-            <div><img id="insta" src="./src/svg/Spotify.svg" alt="">
+            <div onclick="window.open('https://open.spotify.com/show/4khQtZPfE3WJNcKcMfIOKT?si=QPT3FxX4SnqHVAySjd56aA&utm_source=copy-link&nd=1');"><img id="insta" src="./src/svg/Spotify.svg" alt="">
                 <span>Spotify</span>
             </div>
-            <div><img id="insta" src="./src/svg/YT.svg" alt="">
+            <div onclick="window.open('https://www.youtube.com/channel/UCtPqqwwCYvLf1qbuD9vB1fA');"><img id="insta" src="./src/svg/YT.svg" alt="">
                 <span>Youtube</span>
             </div>
         </div>
 
         <!--3-->
 
+        <div id="upcoming-events">
+            <div class="pb-8 pt-8 h-screen justify-items-center content-center">
+                <div style="text-align: center; height: 100%;">
+                    <div class="justify-items-center content-center" style="width: 80%; height: 80%; margin: auto; background-color: #374676;">
+                        <!-- Display the countdown timer in an element -->
+                        <p id="countdown-timer">0d 0h 0m 0s</p>
+                        <p id="event-countdown-name">Event</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--4-->
         <div id="carrousel-bg" style="margin-top: 2.5rem;">
             <p style="font-size: 100px; color: #ffffff; position: absolute; margin-left: auto;margin-right: auto;left: 0;right: 0;text-align: center; margin-top: 12rem;">Events</p>
             <img src="./src/svg/Wave.svg" alt="" style="width:100%; height: auto !important;">
@@ -341,9 +363,47 @@
             document.getElementsByClassName('adswrap')[0].style.display = "none";
         }, 15000);
     </script>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Mar 14, 2022 3:14:15").getTime();
 
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+        
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+        
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+          // Display the result in the element with id="demo"
+          document.getElementById("countdown-timer").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+        
+          // If the count down is finished, write some text
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+    </script>
+    <script>
+        function openLink() {
+            window.open('https://www.instagram.com/osisdhdm/');
+        }
 
+        window.addEventListener("scroll", function() {
+			var body = document.querySelector("body");
+			body.classList.toggle("aboutPage", window.scrollY > 500)
+		})
 
+    </script>
 
 </body>
 
