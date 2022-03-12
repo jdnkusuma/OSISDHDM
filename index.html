@@ -113,6 +113,21 @@
             height: auto;
         }
         
+        #border-top-left{
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 5rem;
+            height: auto;
+        }
+        #border-bottom-right{
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            width: 5rem;
+            height: auto;
+        }
+
         #countdown-timer {
             font-size: 64px;
         }
@@ -267,10 +282,15 @@
             <div class="pb-8 pt-8 h-screen justify-items-center content-center" style="margin-top: 5rem;">
                 <div style="text-align: center; height: 100%;">
                     <div class="justify-items-center content-center" style="width: 80%; height: 80%; margin: auto; background-color: #374676; display: flex; align-items: center; justify-content: center;">
-                        <div style="width: 40rem; background-color:rgba(254, 254, 254, 0.75); padding: 1rem;">
+
+                        <div style="width: 60%; height: 50%;background-color:rgba(254, 254, 254, 0.75); padding: 1rem; position: relative;display: flex; align-items: center; justify-content: center;">
+                            <img id="border-top-left" src="./src/svg/border-top-left.svg">
                             <!-- Display the countdown timer in an element -->
-                            <p id="countdown-timer">0d 0h 0m 0s</p>
-                            <p id="event-countdown-name">To The Event!</p>                            
+                            <div>
+                                <p id="countdown-timer">0d 0h 0m 0s</p>
+                                <p id="event-countdown-name">To The Event!</p>                                    
+                            </div>
+                            <img id="border-bottom-right" src="./src/svg/border-bottom-right.svg">                      
                         </div>
 
                     </div>

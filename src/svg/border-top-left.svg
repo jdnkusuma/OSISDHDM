@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fec32b;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" y="-245.406" width="39.625" height="990.812"/>
+  <rect class="cls-1" x="-257.625" y="0.156" width="1015.25" height="39.969"/>
+</svg>
