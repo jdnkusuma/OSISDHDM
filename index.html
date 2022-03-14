@@ -14,7 +14,10 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/shan.css" />
     <link rel="stylesheet" href="css/slide.css" />
-    <link rel="stylesheet" href="font/font.css" />
+    <link rel="stylesheet" href="font//EuclidCircularB/font.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -229,7 +232,7 @@
 
 </head>
 
-<body class="no-scrollbar" style="font-family:Euclid Circular B;">
+<body class="no-scrollbar" style="font-family: 'Lato', sans-serif;">
     <!--Top-->
     <div class="adswrap" id="adswrap">
         <div>Promotion Ads</div>
@@ -424,7 +427,8 @@
           // If the count down is finished, write some text
           if (distance < 0) {
             clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
+            document.getElementById("countdown-timer").innerHTML = "Let's Go!";
+            document.getElementById("event-countdown-name").innerHTML = "Event has started";
           }
         }, 1000);
     </script>
