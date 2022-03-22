@@ -4,20 +4,6 @@ Used to modify / add components for tailwind.css
 Pls make sure to credit me :>
 */
 
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
-}
-
-
-/* Hide scrollbar for IE, Edge and Firefox */
-
-.no-scrollbar {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
-
 .bg-whites {
     border-width: 1px;
     --tw-border-opacity: 0.3;
