@@ -186,6 +186,13 @@
         }
         
         @media only screen and (max-width:776px) {
+            #sosmed2 {
+                display: grid;
+                grid-template-rows: repeat(3, minmax(0, 1fr));
+                justify-items: center;
+                align-content: center;
+                gap: 1rem;
+            }
             nav>ul>li {
                 display: none;
             }
@@ -193,6 +200,13 @@
         /*Phone Screen ^*/
         
         @media only screen and (min-width:777px) {
+            #sosmed2 {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                justify-items: center;
+                align-content: center;
+                gap: 1rem;
+            }
             #menu {
                 display: none;
             }
@@ -276,7 +290,7 @@
 
         <!--2-->
 
-        <div id="sosmed2" class="grid grid-cols-3 justify-items-center content-center gap-4" style="margin-top:28rem">
+        <div id="sosmed2" style="margin-top:28rem">
             <div onclick="window.open('https://www.instagram.com/osisdhdm/');"><img id="insta" src="./src/svg/Insta.svg" alt="" style="float: left;">
                 <span>Instagram</span>
             </div>
