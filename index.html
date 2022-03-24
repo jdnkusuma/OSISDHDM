@@ -67,13 +67,13 @@
             right: 0;
             top: 4rem;
             width: auto;
-            height: 100%;
+            height: 100vh;
             z-index: -99999;
         }
         
         .main-text {
-            margin-top: 4rem;
-            margin-left: 10rem;
+            margin-top: 2vw;
+            margin-left: 8vw;
         }
         
         .text-img {
@@ -82,7 +82,9 @@
         }
         
         #content {
-            margin-top: 12rem;
+            top: 0;
+            margin-top: 10vw;
+            margin-bottom: 20vh;
         }
         
         #sosmed {
@@ -180,6 +182,25 @@
                 justify-items: center;
                 align-content: center;
                 gap: 1rem;
+            }
+            .main-text {
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                width: 100%;
+                margin: 0;
+                display: flex; 
+                justify-content: center; 
+                align-items: center;
+                flex-direction: column;
+                transform: translate(-50%, -50%);
+            }
+            .text-img {
+                width: 50%;
+                height: auto;
+            }
+            .main-img {
+                height: auto;
             }
         }
         /*Phone Screen ^*/
@@ -414,6 +435,27 @@
 			body.classList.toggle("upcoming-events-body", window.scrollY > 900)
 		})
 
+    </script>
+    <script>
+        //swipe input, not exactly sure how to implement it to the carousel but yea
+        let touchstartX = 0
+        let touchendX = 0
+        
+        const slider = document.getElementById('slider')
+        
+        function handleGesture() {
+          if (touchendX < touchstartX) alert('swiped left!')
+          if (touchendX > touchstartX) alert('swiped right!')
+        }
+
+        slider.addEventListener('touchstart', e => {
+          touchstartX = e.changedTouches[0].screenX
+        })
+
+        slider.addEventListener('touchend', e => {
+          touchendX = e.changedTouches[0].screenX
+          handleGesture()
+        })
     </script>
 
 </body>
